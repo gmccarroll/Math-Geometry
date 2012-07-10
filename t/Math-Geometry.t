@@ -1,8 +1,8 @@
-#!perl
+#!/usr/bin/env perl
 
-use Test::More tests => 15;
+use Test::More qw(no_plan);
 
-BEGIN { use_ok('Math::Geometry') }
+use_ok('Math::Geometry');
 
 ok(pi()>3.14 && pi()<3.15,'PI seems to be right-ish');
 
@@ -11,7 +11,6 @@ is(rad2deg(0),0,'rad2deg ok #2');
 
 is(deg2rad(180),pi(),'deg2rad ok #1');
 is(deg2rad(0),0,'deg2rad ok #2');
-
 
 my @p1;
 my @p2;
